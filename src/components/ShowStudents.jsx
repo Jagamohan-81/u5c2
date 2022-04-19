@@ -2,20 +2,20 @@ import { getValue } from "@testing-library/user-event/dist/utils";
 import { useEffect,useState } from "react";
 export const ShowStudents = () => {
    
-   const [studentsdata,showdata] = useState([])
-   useEffect(()=>{
-        fetch("http://localhost:8080/students").then(d)=>d.json().then((data)=>{
-            data.sort((a,b)=>{
-                const nameA=a.first_name.toUpperCase();
-                const nameB=b.first_name.toUpperCase();
-                if(nameA < nameB){
-                    return -1
-                }
-                if(nameA > nameB){return 1}
-            })
-            showdata(data)
-        });
-   },[]);
+//    const [studentsdata,showdata] = useState([])
+//    useEffect(()=>{
+//         fetch("http://localhost:8080/students").then(d)=>d.json().then((data)=>{
+//             data.sort((a,b)=>{
+//                 const nameA=a.first_name.toUpperCase();
+//                 const nameB=b.first_name.toUpperCase();
+//                 if(nameA < nameB){
+//                     return -1
+//                 }
+//                 if(nameA > nameB){return 1}
+//             })
+//             showdata(data)
+//         });
+//    },[]);
 
     return (
       <div>
@@ -59,18 +59,18 @@ export const ShowStudents = () => {
             </tr>
           </thead>
           <tbody className="tbody">
-            {studentsdata.map((e)=>{
+//             {studentsdata.map((e)=>{
                 return <tr className="row">
-              <td className="first_name">{e.first_name}</td>
-              <td className="last_name">{e.last_name}</td>
-              <td className="email">{e.email}</td>
-              <td className="gender">{e.gender}</td>
-              <td className="age">{e.age}</td>
-              <td className="tenth_score">{e.tenth_score}</td>
-              <td className="twelth_score">{e.twelth_score}</td>
-              <td className="preferred_branch">{e.preferred_branch}</td>
+              <td className="first_name">xyz</td>
+              <td className="last_name">xyc</td>
+              <td className="email">hcchc</td>
+              <td className="gender">male</td>
+              <td className="age">30td>
+              <td className="tenth_score">67td>
+              <td className="twelth_score">90td>
+              <td className="preferred_branch">science
             </tr>
-            })}
+//             })}
           </tbody>
         </table>
       </div>
